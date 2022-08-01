@@ -1,0 +1,265 @@
+
+<html>
+<head>
+<title>tools huihai</title>
+
+<style>
+body {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden !important;
+    background: #051523;
+}
+.input_control{
+  width:400px;
+  margin:20px auto;
+  float: left;
+  margin-left: 10px;
+}
+.div_control{
+  width:100%;
+  height: 100px;
+  margin:20px auto;
+}
+a.white-link {
+    color: #fff;
+}
+.google-hacking-options-column {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa, .fas {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+}
+.fa-search:before {
+    content: url("data:image/png;base64,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");
+}
+
+.orange {
+    color: #F7951E !important;
+}
+.text-left {
+    text-align: left!important;
+}
+.text-nowrap {
+    white-space: nowrap!important;
+}
+.pb-2 {
+    padding-bottom: .5rem!important;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+.google-hacking-options-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.pb-3 {
+   padding-bottom: 1rem!important;
+}
+.form-group {
+        #border: 1px #fff solid;
+   
+        margin-bottom: 1rem; 
+       float: left;
+}
+.form-input{
+
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+ 
+}
+ 
+input[type="text"],#btn1,#btn2{
+  box-sizing: border-box;
+  text-align:center;
+  font-size:1.4em;
+  height:2.7em;
+  border-radius:4px;
+  border:1px solid #c8cccf;
+  color:#6a6f77;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  padding:0 1em;
+  text-decoration:none;
+  width:100%;
+}
+input[type="text"]:focus{
+  border:1px solid #ff7496;
+}
+</style>
+ <script>
+                        function do_google_search(type) 
+                        {
+                            
+                            
+                            site = document.getElementById('target').value;
+                            if(site==""||site.length<3)
+                            {
+                                alert("please input target !")
+                                return;
+                            }
+                            if (site.indexOf('://') > 0) {
+                                site = site.substr(site.indexOf('://')+3);
+                            }
+                            if (site.indexOf('/') > 0) {
+                                site = site.substr(0, site.indexOf('/'));
+                            }
+                            if (site.indexOf('?') > 0) {
+                                site = site.substr(0, site.indexOf('?'));
+                            }
+                            if (site.indexOf('&') > 0) {
+                                site = site.substr(0, site.indexOf('&'));
+                            }
+                            url = 'https://www.google.com/search?q=';
+                            switch(type)
+                            {
+                                case 1:
+                                    url += 'site:' + site + '+intitle:index.of';
+                                    break;
+                                case 2:
+                                    url += 'site:' + site + '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini+|+ext:env';
+                                    break;
+                                case 3:
+                                    url += 'site:' + site + '+ext:sql+|+ext:dbf+|+ext:mdb';
+                                    break;
+                                case 4:
+                                    url += 'site:' + site + '+ext:log';
+                                    break;
+                                case 5:
+                                    url += 'site:' + site + '+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup';
+                                    break;
+                                case 6:
+                                    url += 'site:' + site + '+inurl:login+|+inurl:signin+|+intitle:Login+|+intitle:"sign+in"+|+inurl:auth';
+                                    break;
+                                case 7:
+                                    url += 'site:' + site + '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
+                                    break;
+                                case 8:
+                                    url += 'site:' + site + '+ext:doc+|+ext:docx+|+ext:odt+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv';
+                                    break;
+                                case 9:
+                                    url += 'site:' + site + '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"';
+                                    break;
+                                case 10:
+                                    url += 'site:' + site + '+"PHP+Parse+error"+|+"PHP+Warning"+|+"PHP+Error"';
+                                    break;
+                                case 11:
+                                    url += 'site:pastebin.com | site:paste2.org | site:pastehtml.com | site:slexy.org | site:snipplr.com | site:snipt.net | site:textsnip.com | site:bitpaste.app | site:justpaste.it | site:heypasteit.com | site:hastebin.com | site:dpaste.org | site:dpaste.com | site:codepad.org | site:jsitor.com | site:codepen.io | site:jsfiddle.net | site:dotnetfiddle.net | site:phpfiddle.org | site:ide.geeksforgeeks.org | site:repl.it | site:ideone.com | site:paste.debian.net | site:paste.org | site:paste.org.ru | site:codebeautify.org  | site:codeshare.io | site:trello.com "' + site + '"';
+                                    break;
+                                case 12:
+                                    url += 'site:github.com | site:gitlab.com "' + site + '"';
+                                    break;
+                                case 13:
+                                    url += 'site:stackoverflow.com "' + site + '"';
+                                    break;
+                                case 14:
+                                    url += 'site:' + site + '+inurl:signup+|+inurl:register+|+intitle:Signup';
+                                    break;
+                            }
+                            window.open(url,'',                         'scrollbars=yes,menubar=no,height=600,width=800,resizable=yes,toolbar=yes,menubar=no,location=no,status=no');
+
+                            var img = new Image();
+                            img.src = '/?p=tool_exec&tool=google_hacking&site='+site+'&type='+type;
+                        }
+
+                                            </script>
+</head>
+<body>
+<span class="form-input"><b>Google Hacking tool</b></span>
+
+<div class="div_control">
+<div class="input_control">
+        <input type="text" id="target" class="form-input" placeholder="example.com"/>
+</div>
+</div>
+ 
+<div class="div_control">
+ 
+<div class="form-group pb-3">
+<div class="google-hacking-options-container">
+  <div class="google-hacking-options-column">
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(8)" class="white-link"> Publicly exposed documents</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(1)" class="white-link"> Directory listing vulnerabilities</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(2)" class="white-link"> Configuration files exposed</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(3)" class="white-link"> Database files exposed</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(4)" class="white-link"> Log files exposed</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(5)" class="white-link"> Backup and old files</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(6)" class="white-link"> Login pages</a>
+      </div>
+  </div>
+
+  <div class="google-hacking-options-column">
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(7)" class="white-link"> SQL errors</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(10)" class="white-link"> PHP errors / warnings</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(9)" class="white-link"> phpinfo()</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(11)" class="white-link"> Search Pastebin.com / pasting sites</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(12)" class="white-link"> Search Github.com and Gitlab.com</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(13)" class="white-link"> Search Stackoverflow.com</a>
+      </div>
+      <div class="pb-2 text-left text-nowrap">
+          <i class="ace-icon fa fa-search orange" aria-hidden="true"></i>&nbsp;
+          <a href="#" onclick="do_google_search(14)" class="white-link"> Signup pages</a>
+      </div>
+  </div>
+</div>
+                        </div>
+                    </div>
+                 </div>
+</body>
+</html>
