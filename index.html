@@ -1,111 +1,10 @@
 
 <html>
 <head>
-<title>tools huihai</title>
+<title>GDork</title>
 
-<style>
-body {
-    font-family: 'Lato', sans-serif;
-    color: #ffffff;
-    overflow-x: hidden !important;
-    background: #051523;
-}
-.input_control{
-  width:400px;
-  margin:20px auto;
-  float: left;
-  margin-left: 10px;
-}
-.div_control{
-  width:100%;
-  height: 100px;
-  margin:20px auto;
-}
-a.white-link {
-    color: #fff;
-}
-.google-hacking-options-column {
-    flex: 1;
-    padding-left: 10px;
-    padding-right: 10px;
-   
-}
-.fa, .fab, .fad, .fal, .far, .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-}
-.fa, .fas {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-}
-.fa-search:before {
-    content: url("data:image/png;base64,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");
-}
+<!-- A tool by huihai -->
 
-.orange {
-    color: #F7951E !important;
-}
-.text-left {
-    text-align: left!important;
-}
-.text-nowrap {
-    white-space: nowrap!important;
-}
-.pb-2 {
-    padding-bottom: .5rem!important;
-}
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-.google-hacking-options-container {
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.pb-3 {
-   padding-bottom: 1rem!important;
-}
-.form-group {
-        #border: 1px #fff solid;
-   
-        margin-bottom: 1rem; 
-       float: left;
-}
-.form-input{
-
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
- 
-}
- 
-input[type="text"],#btn1,#btn2{
-  box-sizing: border-box;
-  text-align:center;
-  font-size:1.4em;
-  height:2.7em;
-  border-radius:4px;
-  border:1px solid #c8cccf;
-  color:#6a6f77;
-  -web-kit-appearance:none;
-  -moz-appearance: none;
-  display:block;
-  outline:0;
-  padding:0 1em;
-  text-decoration:none;
-  width:100%;
-}
-input[type="text"]:focus{
-  border:1px solid #ff7496;
-}
-</style>
  <script>
                         function do_google_search(type) 
                         {
@@ -183,13 +82,12 @@ input[type="text"]:focus{
 
                                             </script>
 </head>
+    
+    
 <body>
-<span class="form-input"><b>Google Hacking tool</b></span>
-
-<div class="div_control">
+<h2>Google Hacking tool</h2>
 <div class="input_control">
         <input type="text" id="target" class="form-input" placeholder="example.com"/>
-</div>
 </div>
  
 <div class="div_control">
